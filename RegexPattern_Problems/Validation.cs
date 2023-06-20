@@ -9,15 +9,15 @@ namespace RegexPattern_Problems
 {
     internal class Validation
     {
-        public string String_Pattern = "^[a]{1}[b]{2,3}$";
+        public string String_Pattern = "[a-z][_]";
         public void Vadlidate_String_Pattern(string word)
         {
+            int count = 0;
             Regex regex  = new Regex(String_Pattern);
-            if(regex.IsMatch(word))
-            {
-                Console.WriteLine("String is Valid");
-            }
-            else { Console.WriteLine("String is Not Valid"); }
+           var result = regex.Matches(word);
+            Console.WriteLine(result.Count);
+            
+           
         }
     }
 }
