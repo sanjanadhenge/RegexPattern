@@ -12,8 +12,7 @@ namespace RegexPattern_Problems
        public static void Main(string[] args)
         {
             Validation validation = new Validation();
-            Console.WriteLine("Enter the string");
-            string word = Console.ReadLine();
+            string word = "<p>The<code>Regex</code>is a compiled representaion of a regular expression.</p>";
             validation.Vadlidate_String_Pattern(word);
         }
     }

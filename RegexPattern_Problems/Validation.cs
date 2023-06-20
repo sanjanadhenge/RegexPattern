@@ -9,13 +9,16 @@ namespace RegexPattern_Problems
 {
     internal class Validation
     {
-        public string String_Pattern = "[a-z][_]";
+        public string String_Pattern = "[<][/]{0,1}[a-z]{1,}[>]";
         public void Vadlidate_String_Pattern(string word)
         {
             int count = 0;
             Regex regex  = new Regex(String_Pattern);
            var result = regex.Matches(word);
-            Console.WriteLine(result.Count);
+            foreach(var item in result)
+            {
+                Console.WriteLine(item);
+            }
             
            
         }
