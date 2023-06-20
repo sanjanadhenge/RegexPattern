@@ -12,7 +12,7 @@ namespace RegexPattern_Problems
        public static void Main(string[] args)
         {
             Validation validation = new Validation();
-            string word = "<p>The<code>Regex</code>is a compiled representaion of a regular expression.</p>";
+            string word = "foxes are omnivorous mammals belonging to sevaral genera of the family Canidae fox.";
             validation.Vadlidate_String_Pattern(word);
         }
     }

@@ -9,16 +9,15 @@ namespace RegexPattern_Problems
 {
     internal class Validation
     {
-        public string String_Pattern = "[<][/]{0,1}[a-z]{1,}[>]";
+        public string String_Pattern = "fox(es)?";
         public void Vadlidate_String_Pattern(string word)
         {
             int count = 0;
             Regex regex  = new Regex(String_Pattern);
            var result = regex.Matches(word);
-            foreach(var item in result)
-            {
-                Console.WriteLine(item);
-            }
+            
+                Console.WriteLine("There are {0} occurrences",result.LongCount());
+            
             
            
         }
