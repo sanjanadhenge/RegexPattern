@@ -12,7 +12,8 @@ namespace RegexPattern_Problems
        public static void Main(string[] args)
         {
             Validation validation = new Validation();
-            string word = "foxes are omnivorous mammals belonging to sevaral genera of the family Canidae fox.";
+            Console.WriteLine("Enter File Name");
+            string word = Console.ReadLine();
             validation.Vadlidate_String_Pattern(word);
         }
     }
