@@ -9,18 +9,18 @@ namespace RegexPattern_Problems
 {
     internal class Validation
     {
-        public string String_Pattern = "[a-z/]{1,}[.](png){0,1}(jpeg)";
+        public string String_Pattern = "(https://)([a-z]{1,}[.]){0,1}[a-z0-9A-Z]{1,}[.](com)[/]{1}([a-zA-Z/]{1,}){0,1}";
         public void Vadlidate_String_Pattern(string word)
         {
             int count = 0;
             Regex regex  = new Regex(String_Pattern);
             if(regex.IsMatch(word))
             {
-                Console.WriteLine("File Name is Valid");
+                Console.WriteLine("Website is Valid");
             }
             else
             {
-                Console.WriteLine("File Name is Not Valid");
+                Console.WriteLine("Website is Not Valid");
             }
             
            
